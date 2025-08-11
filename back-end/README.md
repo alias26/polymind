@@ -106,6 +106,7 @@ alembic upgrade head
 ## 🤖 지원 AI 모델
 
 ### OpenAI
+- **GPT-5 시리즈**: GPT-5, GPT-5 Mini, GPT-5 Nano, GPT-5 Chat
 - **GPT-4.1 시리즈**: GPT-4.1, GPT-4.1 Mini, GPT-4.1 Nano
 - **GPT-4o 시리즈**: GPT-4o, GPT-4o Mini (멀티모달)
 - **추론 모델**: o3, o4-mini
