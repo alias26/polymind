@@ -1,0 +1,17 @@
+{
+  "name": "PolyMind - AI Chat Assistant",
+  "short_name": "PolyMind",
+  "description": "다중 AI 모델을 활용한 스마트 채팅 도우미",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366f1",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

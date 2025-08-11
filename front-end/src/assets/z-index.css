@@ -1,0 +1,50 @@
+/* Z-Index 체계 정리 */
+:root {
+  /* 기본 레이어 */
+  --z-base: 0;
+  --z-background: -1;
+
+  /* 콘텐츠 레이어 */
+  --z-content: 1;
+  --z-sidebar: 10;
+  --z-header: 20;
+
+  /* 상호작용 레이어 */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+
+  /* 오버레이 레이어 */
+  --z-modal-backdrop: 1000;
+  --z-modal: 1010;
+  --z-popover: 1020;
+  --z-tooltip: 1030;
+
+  /* 최상위 레이어 */
+  --z-toast: 2000;
+  --z-loading: 2010;
+  --z-debug: 9999;
+}
+
+/* 기존 값들과의 호환성을 위한 클래스들 */
+.z-base { z-index: var(--z-base); }
+.z-content { z-index: var(--z-content); }
+.z-sidebar { z-index: var(--z-sidebar); }
+.z-header { z-index: var(--z-header); }
+.z-dropdown { z-index: var(--z-dropdown); }
+.z-sticky { z-index: var(--z-sticky); }
+.z-fixed { z-index: var(--z-fixed); }
+.z-modal-backdrop { z-index: var(--z-modal-backdrop); }
+.z-modal { z-index: var(--z-modal); }
+.z-popover { z-index: var(--z-popover); }
+.z-tooltip { z-index: var(--z-tooltip); }
+.z-toast { z-index: var(--z-toast); }
+.z-loading { z-index: var(--z-loading); }
+.z-debug { z-index: var(--z-debug); }
+
+/* 현재 사용 중인 값들 (기존 호환성 유지) */
+.z-legacy-nav { z-index: 1000; }        /* NavigationBar 드롭다운 */
+.z-legacy-modal { z-index: 1000; }      /* 일반 모달 */
+.z-legacy-image { z-index: 2000; }      /* 이미지 모달 */
+.z-legacy-image-btn { z-index: 2001; }  /* 이미지 모달 버튼 */
+.z-legacy-toast { z-index: 9999; }      /* 토스트 알림 */

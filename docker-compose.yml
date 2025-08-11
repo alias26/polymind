@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  # PostgreSQL 데이터베이스
+  postgres:
+    image: postgres:15-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: polymind_db
+      POSTGRES_USER: polymind
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-polymind_password}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U polymind"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # FastAPI 백엔드
+  backend:
+    build: ./back-end
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://polymind:${DB_PASSWORD:-polymind_password}@postgres:5432/polymind_db
+      SECRET_KEY: ${SECRET_KEY:-your_secret_key_change_this_in_production}
+      ENCRYPTION_KEY: ${ENCRYPTION_KEY:-your_encryption_key_32_characters}
+      ENVIRONMENT: production
+      DEBUG: false
+      ALLOWED_ORIGINS: ${FRONTEND_URL:-http://localhost:3000}
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # Vue.js 프론트엔드
+  frontend:
+    build: 
+      context: ./front-end
+      args:
+        VUE_APP_API_BASE_URL: ${BACKEND_URL:-http://localhost:8000}
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+volumes:
+  postgres_data:

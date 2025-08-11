@@ -1,0 +1,216 @@
+/* 공통 버튼 스타일 - WCAG 2.1 AAA 준수 */
+
+/* 기본 버튼 공통 속성 */
+.btn-base {
+  font-family: inherit;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  outline: none;
+  box-sizing: border-box;
+  line-height: 1.2;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+/* router-link에 버튼 스타일 적용 지원 */
+a.btn-base {
+  text-decoration: none;
+}
+
+a.btn-base:visited {
+  color: inherit;
+}
+
+/* 주요 액션 버튼 (48x44px 이상) */
+.btn-primary {
+  min-height: 44px;
+  height: 44px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(99, 102, 241, 0.2);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(99, 102, 241, 0.3);
+  background: linear-gradient(135deg, #4f46e5, #3b38e5);
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 보조 버튼 (44x44px 이상) */
+.btn-secondary {
+  min-height: 44px;
+  height: 44px;
+  padding: 12px 24px;
+  background: #ffffff;
+  color: #6366f1;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #f8fafc;
+  color: #4f46e5;
+  border-color: #6366f1;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.15);
+}
+
+.btn-secondary:focus {
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+}
+
+/* 텍스트 링크 버튼 (44x44px 이상) */
+.btn-link:not(.dropdown-item) {
+  min-height: 44px;
+  height: 44px;
+  padding: 12px 20px;
+  background: #f8fafc;
+  color: #6366f1;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-link:not(.dropdown-item):hover:not(:disabled) {
+  background: #f1f5f9;
+  color: #4f46e5;
+  border-color: #cbd5e0;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(99, 102, 241, 0.1);
+}
+
+.btn-link:not(.dropdown-item):focus {
+  background: #f1f5f9;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+}
+
+/* 아이콘 버튼 (44x44px) */
+.btn-icon {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 10px;
+  background: none;
+  border: 1px solid #e2e8f0;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.btn-icon:hover:not(:disabled) {
+  background: #f8fafc;
+  border-color: #cbd5e0;
+  color: #374151;
+}
+
+.btn-icon:focus {
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+}
+
+/* 위험한 액션 버튼 */
+.btn-danger {
+  min-height: 44px;
+  height: 44px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+}
+
+.btn-danger:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.3);
+}
+
+/* 작은 버튼 (특별한 경우에만 사용) */
+.btn-small {
+  min-height: 36px;
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+/* 큰 버튼 */
+.btn-large {
+  min-height: 56px;
+  padding: 16px 32px;
+  font-size: 18px;
+}
+
+/* 전체 너비 버튼 */
+.btn-full {
+  width: 100%;
+}
+
+/* 로딩 상태 */
+.btn-loading {
+  position: relative;
+  color: transparent;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: btn-spin 1s linear infinite;
+}
+
+@keyframes btn-spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* 반응형 조정 */
+@media (max-width: 768px) {
+  .btn-primary,
+  .btn-secondary,
+  .btn-danger {
+    min-height: 48px; /* 모바일에서는 더 큰 터치 영역 */
+  }
+  
+  .btn-icon {
+    min-width: 48px;
+    min-height: 48px;
+  }
+}
