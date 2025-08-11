@@ -32,7 +32,7 @@ OpenAI GPT, Anthropic Claude, Google Gemini 등 여러 AI 모델을 하나의 �
 ## ✨ 주요 특징
 
 ### 🤖 **다중 AI 모델 지원**
-- **OpenAI**: GPT-4.1/Mini/Nano, GPT-4o/Mini, GPT-3.5 Turbo, o3/o4-mini
+- **OpenAI**: GPT-5/Mini/Nano/Chat,GPT-4.1/Mini/Nano, GPT-4o/Mini, GPT-3.5 Turbo, o3/o4-mini
 - **Anthropic**: Claude Opus 4.1/4, Claude Sonnet 4/3.7/3.5, Claude Haiku 3.5/3
 - **Google**: Gemini 2.5 Pro/Flash (최대 200만 토큰)
 - **실시간 스트리밍**: 모든 모델 응답 실시간 표시
