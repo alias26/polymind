@@ -245,9 +245,3 @@ PolyMind는 다음 오픈소스 기술들로 구현되었습니다:
 - [OpenAI](https://openai.com/), [Anthropic](https://anthropic.com/), [Google AI](https://ai.google/) - AI 모델 API
 
 ---
-
-<div align="center">
-
-**Made with ❤️ by [Your Name]**
-
-</div>
