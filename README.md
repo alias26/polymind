@@ -6,7 +6,7 @@ OpenAI GPT, Anthropic Claude, Google Gemini 등 여러 AI 모델을 하나의 �
 
 ## 📸 실행 화면
 ### 🎥 데모 영상
-[![PolyMind 데모](./assets/introduction.png)](./assets/PolyMind%20-%20AI%20Chat%20Assistant%20-%20Chrome%202025-08-11%2018-36-38.mp4)
+![PolyMind 데모](./assets/PolyMind%20-%20AI%20Chat%20Assistant.gif)
 
 ### 첫 화면 인터페이스
 ![PolyMind 메인 화면](./assets/introduction.png)
