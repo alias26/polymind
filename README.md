@@ -2,7 +2,7 @@
 
 **다중 AI 서비스 통합 웹 애플리케이션**
 
-OpenAI GPT, Anthropic Claude, Google Gemini 등 여러 AI 모델을 하나의 인터페이스에서 사용할 수 있는 풀스택 웹 애플리케이션입니다. 사용자 인증 시스템과 실시간 스트리밍 채팅 기능을 포함합니다.
+OpenAI GPT, Anthropic Claude, Google Gemini 등 여러 AI 모델을 하나의 인터페이스에서 사용할 수 있는 풀스택 웹 애플리케이션입니다. 사용자 인증 시스템과 실시간 스트리밍 채팅 기능을 포함합니다. Claude COde를 사용해서 바이브 코딩해서 개발한 프로젝트입니다.
 
 ## 📸 실행 화면
 ### 🎥 데모 영상
